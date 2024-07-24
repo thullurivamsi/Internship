@@ -1,0 +1,61 @@
+body{
+    display: grid;
+    justify-content: center;
+    padding:170px;
+    gap:1px;
+    color:white;
+    font:arial;
+    font-size: 4rem;
+    background-color: grey;
+}
+.butt{
+    color:white;
+    background-color: rgb(53, 50, 46);
+    border: none;
+    border-radius: 25px;
+    font-size: 4rem;
+    width: 100px;
+    height:100px;
+    text-align: center;
+    cursor: pointer;
+}
+.butt:hover{
+    background-color: rgb(175, 175, 175);
+    color:rgb(8, 8, 8);
+}
+.bttns{
+    color:white;
+    background-color: rgb(255, 166, 0);
+    border: none;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    width: 100px;
+    height:100px;
+    text-align: center;
+    cursor: pointer;
+}
+.bttns:hover{
+    background-color: chocolate;
+}
+.bttns:active{
+    background-color: rgb(107, 55, 9)
+}
+#counter{
+    background-color: black;
+    color:white;
+    font-size: 4rem;
+    padding: 10px;
+    border-radius:10px;
+    gap:20px;
+    display: flex;
+    justify-content: center;
+}
+#buttons{
+    background-color: black;
+    padding: 10px;
+    border-radius:10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    gap: 20px
+}

@@ -1,0 +1,88 @@
+#cc{
+    height: 135px;
+    background-color:black;
+    display:grid;
+    justify-content: center;
+    padding: 10px;
+    gap:10px;
+    border:none;
+    border-radius: 10px;
+    grid-template-columns:repeat(2,1fr);
+    max-width: 600px;
+}
+.curr{
+    width: 100px;
+    height:27px;
+    border:none;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color:white;
+    font-size:1rem;
+    cursor: pointer;
+}
+.curr:hover{
+    background-color: orange;
+}
+.opt{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.nbrs{
+    background-color: rgb(0, 0, 0);
+    color:white;
+    border-radius: 5px;
+    border:none;
+    height: 45px;
+    cursor: pointer;
+    width:400px;
+    overflow: hidden;
+    font: arial;
+    font-size: 3.6rem;
+    text-align: right;
+}
+.nbrs:hover{
+    color:orange;
+}
+button{
+    height:81px;
+    width: 90px;
+    font-size: 3.6rem;
+    border: none;
+    border-radius: 10px;
+    background-color: gray;
+    color:white;
+}
+button:hover{
+    background-color: rgb(88, 88, 88);
+}
+button:active{
+    background-color: chocolate;
+}
+#currency{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background-color: black;
+    padding:20px;
+    border-radius: 10px;
+    justify-content: center;
+    gap:20px;
+    max-height: 400px;
+    max-width: 600px;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    justify-content: center;
+}
+.clearit{
+    background-color: orange;
+}
+.clearit:hover{
+    background-color: chocolate;
+}
+.tr{
+    background-color: rgb(0, 150, 0);
+}
+.tr:hover{
+    background-color: rgb(0,120,0);
+}

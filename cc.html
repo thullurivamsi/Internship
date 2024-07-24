@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <link rel="stylesheet" href="cc.css">
+        </head>
+    <body>
+        <div id="cc">
+        <input id="selectfromcurr" type="text" list="fromcurr" class="curr" placeholder="SELECT">
+            <datalist id="fromcurr" class="curr">
+            </datalist>
+            <input id="fromvalue" class="nbrs" value="0" readonly>   
+        <input id="selecttocurr" type="text" list="tocurr" class="curr" placeholder="SELECT">
+            <datalist id="tocurr" class="curr">
+            </datalist>
+            <input id="tovalue" class="nbrs" value="0" readonly>
+        </div>
+        <div id="currency">
+                <button onclick="inputadd('7')">7</button>
+                <button onclick="inputadd('8')">8</button>
+                <button onclick="inputadd('9')">9</button>
+                <button onclick="clearit()"class="clearit">AC</button>
+                <button onclick="inputadd('4')">4</button>
+                <button onclick="inputadd('5')">5</button>
+                <button onclick="inputadd('6')">6</button>
+                <button onclick="clearone()" class="clearit">C</button>
+                <button onclick="inputadd('1')">1</button>
+                <button onclick="inputadd('2')">2</button>
+                <button onclick="inputadd('3')">3</button>
+                <a href="time.html"><button class="tr">TR</button></a>
+                <button onclick="inputadd('.')">.</button>
+                <button onclick="inputadd('0')">0</button>
+        </div>
+        <script src="./cc.js"></script>
+    </body>
+</html>

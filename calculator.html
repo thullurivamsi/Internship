@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="naacalci.css">
+    </head>
+    <body>
+        <div id="calculator">
+            <input id="show" readonly class="show">
+            <input id="showans" readonly class="show">
+            <div id="btns">
+                <button onclick="inputadd('7')">7</button>
+                <button onclick="inputadd('8')">8</button>
+                <button onclick="inputadd('9')">9</button>
+                <button onclick="inputadd('/')" class ="oper">/</button>
+                <button onclick="inputadd('4')">4</button>
+                <button onclick="inputadd('5')">5</button>
+                <button onclick="inputadd('6')">6</button>
+                <button onclick="inputadd('*')" class ="oper">x</button>
+                <button onclick="inputadd('1')">1</button>
+                <button onclick="inputadd('2')">2</button>
+                <button onclick="inputadd('3')">3</button>
+                <button onclick="inputadd('-')" class ="oper">-</button>
+                <button onclick="inputadd('.')">.</button>
+                <button onclick="inputadd('0')">0</button>
+                <button onclick="inputadd('**')" class ="oper">^</button>
+                <button onclick="inputadd('+')" class ="oper">+</button>
+                <a href="cc.html"><button>CC</button></a>
+                <button onclick="clearone()" class="clearit">C</button>
+                <button onclick="clearit()"class="clearit">AC</button>
+                <button onclick="calculate()" class="submit">=</button>
+            </div>
+        </div>
+        <script src="./naacalci.js"></script>
+    </body>
+</html>
