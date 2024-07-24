@@ -24,18 +24,6 @@ const fromvalue=document.getElementById('fromvalue');
 
 let currbit=0;
 
-/*
-sym.forEach(element => {
-    const opt=document.createElement('option');
-    opt.value=element;
-    tocurr.appendChild(opt);
-});
-
-sym.forEach(element => {
-    const opt=document.createElement('option');
-    opt.value=element;
-    fromcurr.appendChild(opt);
-});*/
 
 for(let i=0;i<sym.length;i++){
     const opt=document.createElement("option");
@@ -70,28 +58,53 @@ tovalue.addEventListener("click",()=>{
 });
 
 function inputadd(input){
+    const msg="Please select a currency.";
     let fromselect=selectfromcurr.value;
     let toselect=selecttocurr.value;
-    if(currbit==0){
-        if(fromvalue.value==0){
-            fromvalue.value=input;
-            tovalue.value=calvalue(fromvalue.value,fromselect,toselect);
+    //console.log(fromselect+"\n"+toselect);
+    try{
+        if(fromselect == "" || toselect == ""){
+            throw new Error();
         }
         else{
-            fromvalue.value+=input;
-            tovalue.value=calvalue(fromvalue.value,fromselect,toselect);
-        }
-    }
-    else{
-        if(tovalue.value==0){
-            tovalue.value=input;
-            fromvalue.value=calvalue(tovalue.value,toselect,fromselect);
+            let y="3.6rem";
+        if(currbit==0){
+            if(fromvalue.value==0 || fromvalue.value==msg){
+                fromvalue.value=input;
+                tovalue.value=calvalue(fromvalue.value,fromselect,toselect);
+            }
+            else{
+                fromvalue.value+=input;
+                tovalue.value=calvalue(fromvalue.value,fromselect,toselect);
+            }
+            tovalue.style.fontSize=y;
         }
         else{
-            tovalue.value+=input;
-            fromvalue.value=calvalue(tovalue.value,toselect,fromselect);
+            if(tovalue.value==0 || tovalue.value==msg){
+                tovalue.value=input;
+                fromvalue.value=calvalue(tovalue.value,toselect,fromselect);
+            }
+            else{
+                tovalue.value+=input;
+                fromvalue.value=calvalue(tovalue.value,toselect,fromselect);
+            }
+            fromvalue.style.fontSize=y;
         }
     }
+    }
+    catch(e){
+        const x="1rem";
+        let y;
+        if(currbit==0){
+            y=tovalue;
+        }
+        else{
+            y=fromvalue;
+        }
+        y.style.fontSize=x;
+        y.value=msg;
+    }
+
 }
 
 function clearit(){
