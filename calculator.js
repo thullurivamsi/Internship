@@ -1,20 +1,29 @@
-let display=document.getElementById('show');
-let ans=document.getElementById('showans');
-function inputadd(input){
-    display.value+=input;
+let input=document.getElementById('show');
+let output=document.getElementById('showans');
+let ans;
+function inputadd(element){
+    try{
+        input.value+=element;
+        ans=output.value;
+        output.value=eval(input.value);
+    }
+    catch(error){
+        output.value=ans;
+    }
 }
 function clearit(){
-    display.value="";
-    ans.value="";
+    input.value="";
+    output.value="";
 }
 function clearone(){
-    display.value=display.value.slice(0,-1);
+    input.value=input.value.slice(0,-1);
 }
 function calculate(){
     try{
-        ans.value=eval(display.value);
+        output.value=eval(input.value);
+        console.log(output.value);
     }
     catch(error){
-        ans.value="syntax Error";
+        output.value="syntax Error";
     }
 }
